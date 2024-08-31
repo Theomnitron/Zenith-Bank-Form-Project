@@ -12,10 +12,21 @@
     <title>Zenith Bank Form</title>
     <style>
         *{
-            font-weight: 100px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
         }
         .navlink-DT{
             padding: 0px 25px;
+        }
+        #foot{
+            background-color: #B71C1C;
+            color: white;
+            margin-bottom: -50px;
+            padding: 20px;
         }
         #compact{
             padding: 0px 10px;
@@ -37,30 +48,104 @@
         #form-logo-text{
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 12px;
-            font-weight: 50px !important;
             position: absolute;
             top: 120%;
             left: -8%;
             transform: translate(0%, 0%)
+            color: black !important;
         }
         #form-logo-text-2{
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 12px;
-            font-weight: 50px !important;
             position: absolute;
             top: 120%;
             left: 85%;
+            color: black !important;
         }
         #form-logo-text-3{
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 12px;
-            font-weight: 50px !important;
             position: absolute;
             top: 120%;
             left: 80%;
+            color: black !important;
         }
-        span, label, p{
-            font-style: block;
+        h1,h2,h3,h4,h5,h6{
+            font-weight: bold !important;
+            font-style: normal;
+            font-family: "Josefin Sans", serif;
+        }
+        h2{
+            font-size: 48px;
+        }
+        #form-title{
+            font-size: 28px;
+        }
+        .clear-text{
+            color: black !important;
+        }
+        label {
+            font-size: 0.8rem;
+            color: #020000;
+        }
+        .datepicker-date-display {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 auto;
+            -ms-flex: 1 auto;
+            flex: 1 auto;
+            background-color: white;
+            color: #fff !important;
+            padding: 20px 22px;
+            font-weight: 500;
+        }
+        .datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+            color: #B71C1C;
+            padding: 0 1rem;
+        }
+        .datepicker-table td.is-selected {
+            background-color: white;
+            color: #fff !important;
+        }
+        span {
+            color: #B71C1C !important;
+        }
+        [type="checkbox"]:checked + span:not(.lever):before {
+            top: -4px;
+            left: -5px;
+            width: 12px;
+            height: 22px;
+            border-top: 2px solid transparent;
+            border-left: 2px solid transparent;
+            border-right: 2px solid #B71C1C;
+            border-bottom: 2px solid #B71C1C;
+            -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+        [type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
+            background-color: #B71C1C;
+        }
+        [type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:before, [type="radio"].with-gap:checked + span:after {
+            border: 2px solid #B71C1C;
+        }
+        #logo-shift{
+            margin-top: 10px;
+            background-color: white;
+            border: 6px solid;
+            border-radius: 8px;
+        }
+        .gradient{
+            background-color: #B71C1C;
+        }
+        .copyright{
+            color: rgba(255, 255, 255, 0.722);
+        }
+        #copyright{
+            font-size: 20px;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -88,7 +173,7 @@
                         </div>
                         <div class="col l2 push-l6">
                             <a href="index.html" class="brand-logo">
-                                <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 35px" id="logo-shift">
+                                <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 42px" id="logo-shift">
                             </a>
                         </div>
                     </div>
@@ -102,20 +187,20 @@
                         <i class="material-icons">menu</i>
                     </a>
                     <a href="index.html" class="brand-logo">
-                        <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 35px" id="logo-shift">
+                        <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 42px" id="logo-shift">
                     </a>
                     <ul class="sidenav hide-on-large-only" id="sidenav">
                         <li>
-                            <a href="#" class="bold-text navlink-DT">Home</a>
+                            <a href="#" class="red-text text-darken-4 bold-text navlink-MB">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="bold-text navlink-DT">About Us</a>
+                            <a href="#" class="red-text text-darken-4 bold-text navlink-MB">About Us</a>
                         </li>
                         <li>
-                            <a href="#" class="bold-text navlink-DT">Contact Us</a>
+                            <a href="#" class="red-text text-darken-4 bold-text navlink-MB">Contact Us</a>
                         </li>
                         <li>
-                            <a href="#" class="bold-text navlink-DT">Forms</a>
+                            <a href="#" class="red-text text-darken-4 bold-text navlink-MB">Forms</a>
                         </li>
                     </ul>
                 </div>
@@ -134,7 +219,7 @@
             <form action="">
                 <div class="form">
                     <h2 class="red-text text-darken-3 center-align hide-on-med-and-down">INIDIVUAL ACCOUNT OPENING FORM</h2>
-                    <h3 class="red-text text-darken-3 center-align hide-on-large-only">INIDIVUAL ACCOUNT OPENING FORM</h3>
+                    <h3 id="form-title" class="red-text text-darken-3 center-align hide-on-large-only">INIDIVUAL ACCOUNT OPENING FORM</h3>
                     <div class="row">
                         <div class="col s12 m12 l11">
                             <p class="left-align">This form should be fill in CAPITAL LETTERS. Enable to Check the boxes that apply to you.</p>
@@ -144,9 +229,9 @@
                             <a href="index.html" class="brand-logo">
                                 <img src="img/logo.svg" alt="" class="responsive-img right" style="max-width: 100px" id="logo-form-shift">
                             </a>
-                            <span class="center-align show hide-on-med-and-down" id="form-logo-text">Zenith Bank PLC <br> RC:150224</span>
-                            <span class=" center-align show-on-medium hide-on-small-and-down hide-on-large-only" id="form-logo-text-2">Zenith Bank PLC <br> RC:150224</span>
-                            <span class=" center-align show-on-small-only hide-on-med-and-up" id="form-logo-text-3">Zenith Bank PLC <br> RC:150224</span>
+                            <p class="center-align show hide-on-med-and-down" id="form-logo-text">Zenith Bank PLC <br> RC:150224</p>
+                            <p class=" center-align show-on-medium hide-on-small-and-down hide-on-large-only" id="form-logo-text-2">Zenith Bank PLC <br> RC:150224</p>
+                            <p class=" center-align show-on-small-only hide-on-med-and-up" id="form-logo-text-3">Zenith Bank PLC <br> RC:150224</p>
                         </div>
                         <p class="red-text">Category of Account: (Tick appropriately)</p>
                         <div class="col s12 m12 l2 input-field">
@@ -168,7 +253,7 @@
                             </p>
                         </div>
                         <div class="col s12 m12 l8 input-field">
-                            <i class="material-icons prefix">bank</i>
+                            <i class="material-icons prefix">account_circle</i>
                             <label for="name-of-account">Name of Account</label>
                             <input type="text" name="name-of-account" id="name-of-account">
                         </div>
@@ -195,17 +280,17 @@
                     </div>
                 <div class="row">
                     <div class="col s12 m12 l12 input-field">
-                        <i class="material-icons prefix">bank</i>
+                        <i class="material-icons prefix">account_balance</i>
                         <label for="branch">Branch</label>
                         <input type="text" name="branch" id="branch">
                     </div>
                     <div class="col s12 m12 l6 input-field">
-                        <i class="material-icons prefix">bank</i>
+                        <i class="material-icons prefix">numbers</i>
                         <label for="bvn">Bank Verification Number (BVN)</label>
                         <input type="number" name="bvn" id="bvn">
                     </div>
                     <div class="col s12 m12 l6 input-field">
-                        <i class="material-icons prefix">bank</i>
+                        <i class="material-icons prefix">numbers</i>
                         <label for="acc-no">Account Number (For Official Use Only)</label>
                         <input type="number" name="acc-no" id="acc-no">
                     </div>
@@ -244,23 +329,23 @@
                                 <label for="title" placeholder="title">Title</label>
                             </div>
                             <div class="col s12 m12 l9 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">person_outline</i>
                                 <label for="surname">Surname</label>
                                 <input type="text" name="surname" id="surname">
                             </div>
                         <!-- Line-2 -->
                             <div class="col s12 m12 l4 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">person_outline</i>
                                 <label for="firstname">Firstname</label>
                                 <input type="text" name="firstname" id="firstname">
                             </div>
                             <div class="col s12 m12 l4 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">person_outline</i>
                                 <label for="othernames">Other Names</label>
                                 <input type="text" name="othernames" id="othernames">
                             </div>
                             <div class="col s12 m12 l4 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">face</i>
                                 <label for="mother's-maiden">Mother's Maiden</label>
                                 <input type="text" name="mother's-maiden" id="mother's-maiden">
                             </div>
@@ -278,19 +363,19 @@
                                 <label for="gender" placeholder="Gender">Gender</label>
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="place-of-birth">Place of Birth</label>
                                 <input type="text" name="place-of-birth" id="place-of-birth">
                             </div>
                         <!-- Line-4 -->
                             <div class="col s12 m12 l12 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">flag</i>
                                 <label for="nationality">Nationality</label>
                                 <input type="text" name="nationality" id="nationality">
                             </div>
                         <!-- Line-5-->
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="state-of-origin">State of Origin</label>
                                 <input type="text" name="state-of-origin" id="state-of-origin">
                             </div>
@@ -306,68 +391,68 @@
                             </div>
                         <!-- Line-6 -->
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="local-government-area">Local Government Area</label>
                                 <input type="text" name="local-government-area" id="local-government-area">
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="home-town">Home Town</label>
                                 <input type="text" name="home-town" id="home-town">
                             </div>
                         <!-- Line-7 -->
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">badge</i>
                                 <label for="tax-id-no">Tax ID No.</label>
                                 <input type="text" name="tax-id-no" id="tax-id-no">
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">church</i>
                                 <label for="religion">Religion (optional)</label>
                                 <input type="text" name="religion" id="religion">
                             </div>
                         <!-- Line-8 -->
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">phone</i>
                                 <label for="phone-number-1">Phone Number 1</label>
                                 <input type="number" name="phone-number-1" id="phone-number-1">
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">phone</i>
                                 <label for="phone-number-2">Phone Number 2</label>
                                 <input type="number" name="phone-number-2" id="phone-number-2">
                             </div>
                         <!-- Line-9 -->
                             <div class="col s12 m12 l12 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">email</i>
                                 <label for="email">E-mail Address</label>
                                 <input type="text" name="email" id="email">
                             </div>
                         <!-- Line-10 -->
                             <div class="col s12 m12 l12 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">home</i>
                                 <label for="residential-address">Residential Address</label>
                                 <input type="text" name="residential-address" id="residential-address">
                             </div>
                         <!-- Line-11 -->
                             <div class="col s12 m12 l4 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="state">State</label>
                                 <input type="text" name="state" id="state">
                             </div>
                             <div class="col s12 m12 l4 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="l-b-a">L.G.A</label>
                                 <input type="text" name="l-b-a" id="l-b-a">
                             </div>
                             <div class="col s12 m12 l4 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="city/town">City/Town</label>
                                 <input type="text" name="city/town" id="city/town">
                             </div>
                         <!-- Line-12 -->
                             <div class="col s12 m12 l4 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">numbers</i>
                                 <label for="residence-permit-no">Residence Permit Number</label>
                                 <input type="text" name="residence-permit-no" id="residence-permit-no">
                             </div>
@@ -387,7 +472,7 @@
                             <div class="col s12 m12 l9 input-field">
                                 <p>
                                     <label for="national-id-card">
-                                        <input type="radio" name="name" id="national-id-card">
+                                        <input class="clear-text" type="radio" name="name" id="national-id-card">
                                         <span>National ID Card</span>
                                     </label>
                                     <label for="driver's-license">
@@ -395,23 +480,23 @@
                                         <span>Driver's License</span>
                                     </label>
                                     <label for="international-passport">
-                                        <input type="radio" name="name" id="international-passport"> 
+                                        <input class="clear-text" type="radio" name="name" id="international-passport"> 
                                         <span>International Passport</span>
                                     </label>
                                     <label for="inec-voter's-card">
-                                        <input type="radio" name="name" id="inec-voter's-card"> 
+                                        <input class="clear-text" type="radio" name="name" id="inec-voter's-card"> 
                                         <span>INEC Voter's Card</span>
                                     </label>
                                 </p>
                             </div>
                             <div class="col s12 m12 l3 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">badge</i>
                                 <label for="others">*Others (Please specify)</label>
                                 <input type="text" name="others" id="others">
                             </div>
                         <!-- Line-14 -->
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">numbers</i>
                                 <label for="id-no">ID Number</label>
                                 <input type="number" name="id-no" id="id-no">
                             </div>
@@ -425,7 +510,7 @@
                             </div>
                         <!-- Line-15 -->
                             <div class="col s12 m12 l12 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">question_mark</i>
                                 <label for="purpose-of-account">Purpose of Account</label>
                                 <input type="text" name="purpose-of-account" id="purpose-of-account">
                             </div>
@@ -465,17 +550,17 @@
                                 <label for="title-2" placeholder="Title">Title</label>
                             </div>
                             <div class="col s12 m12 l9 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">person_outline</i>
                                 <label for="surname-k">Surname</label>
                                 <input type="text" name="surname-k" id="surname-k">
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">person_outline</i>
                                 <label for="firstname-k">Firstname</label>
                                 <input type="text" name="firstname-k" id="firstname-k">
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">person_outline</i>
                                 <label for="othernames-k">Other Names</label>
                                 <input type="text" name="othernames-k" id="othernames-k">
                             </div>
@@ -493,45 +578,45 @@
                                 <label for="gender-k" placeholder="Gender">Gender</label>
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">family_restroom</i>
                                 <label for="relationship">Relationship</label>
                                 <input type="text" name="relationship" id="relationship">
                             </div>
                         <!-- Line-3 -->
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">phone</i>
                                 <label for="phone-number-1-k">Phone Number 1</label>
                                 <input type="number" name="phone-number-1-k" id="phone-number-1-k">
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">phone</i>
                                 <label for="phone-number-2-k">Phone Number 2</label>
                                 <input type="number" name="phone-number-2-k" id="phone-number-2-k">
                             </div>
                         <!-- Line-4 -->
                             <div class="col s12 m12 l3 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">home</i>
                                 <label for="house-no-k">House Number</label>
                                 <input type="number" name="house-no-k" id="house-no-k">
                             </div>
                             <div class="col s12 m12 l5 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="street-name-k">Street Name</label>
                                 <input type="text" name="street-name-k" id="street-name-k">
                             </div>
                             <div class="col s12 m12 l4 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="city/town-k">City/Town</label>
                                 <input type="text" name="city/town-k" id="city/town-k">
                             </div>
                         <!-- Line-5 -->
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="state-k">State</label>
                                 <input type="text" name="state-k" id="state-k">
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="l-g-a-k">L.G.A</label>
                                 <input type="text" name="l-g-a-k" id="l-g-a-k">
                             </div>
@@ -561,7 +646,7 @@
                                 <label for="employment-status" placeholder="employment-status">Employment Status</label>
                             </div>
                             <div class="col s12 m12 l3 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">family_restroom</i>
                                 <label for="others-k">*Others (please specify)</label>
                                 <input type="text" name="others-k" id="others-k">
                             </div>
@@ -611,45 +696,45 @@
                             </div>
                         <!-- Line-3 -->
                             <div class="col s12 m12 l3 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">home</i>
                                 <label for="house-no-ed">House Number</label>
                                 <input type="number" name="house-no-ed" id="house-no-ed">
                             </div>
                             <div class="col s12 m12 l5 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="street-name-ed">Street Name</label>
                                 <input type="text" name="street-name-ed" id="street-name-ed">
                             </div>
                             <div class="col s12 m12 l4 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="city/town-ed">City/Town</label>
                                 <input type="text" name="city/town-ed" id="city/town-ed">
                             </div>
                         <!-- Line-4 -->
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="state-ed">State</label>
                                 <input type="text" name="state-ed" id="state-ed">
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">place</i>
                                 <label for="l-g-a-ed">L.G.A</label>
                                 <input type="text" name="l-g-a-ed" id="l-g-a-ed">
                             </div>
                         <!-- Line-5 -->
                             <div class="col s12 m12 l12 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">business</i>
                                 <label for="name-of-business">Name of Business/Occupation</label>
                                 <input type="text" name="name-of-business" id="name-of-business">
                             </div>
                         <!-- Line-6 -->
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">phone</i>
                                 <label for="office-no-1">Office Number 1</label>
                                 <input type="number" name="office-no-1" id="office-no-1">
                             </div>
                             <div class="col s12 m12 l6 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">phone</i>
                                 <label for="office-no-2">Office Number 2</label>
                                 <input type="number" name="office-no-2" id="office-no-2">
                             </div>
@@ -674,21 +759,21 @@
                                 <div class="col s12 m12 l4 input-field">
                                     <p>
                                         <label for="master-card">
-                                            <input type="radio" name="name" id="master-card">
+                                            <input class="clear-text" type="radio" name="name" id="master-card">
                                             <span>Master Card</span>
                                         </label>
                                         <label for="verve">
-                                            <input type="radio" name="name" id="verve"> 
+                                            <input class="clear-text" type="radio" name="name" id="verve"> 
                                             <span>Verve</span>
                                         </label>
                                         <label for="visa">
-                                            <input type="radio" name="name" id="visa"> 
+                                            <input class="clear-text" type="radio" name="name" id="visa"> 
                                             <span>Visa</span>
                                         </label>
                                     </p>
                                 </div>
                                 <div class="col s12 m12 l8 input-field">
-                                    <i class="material-icons prefix">bank</i>
+                                    <i class="material-icons prefix">payment</i>
                                     <label for="others-asr">*Others (Please specify)</label>
                                     <input type="text" name="others-asr" id="others-asr">
                                 </div>
@@ -739,12 +824,12 @@
                                     </p>
                                 </div>
                                 <div class="col s12 m12 l3 input-field">
-                                    <i class="material-icons prefix">bank</i>
-                                    <label for="no-of-leaves">No of Leaves</label>
+                                    <i class="material-icons prefix">numbers</i>
+                                    <label for="no-of-leaves">number</label>
                                     <input type="number" name="no-of-leaves" id="no-of-leaves">
                                 </div>
                                 <div class="col s12 m12 l3 input-field">
-                                    <i class="material-icons prefix">bank</i>
+                                    <i class="material-icons prefix">attach_money</i>
                                     <label for="cost-of-chequebook-is">Cost of Cheque Book is</label>
                                     <input type="number" name="cost-of-chequebook-is" id="cost-of-chequebook-is">
                                 </div>
@@ -771,7 +856,7 @@
                                     </p>
                                 </div>
                                 <div class="col s12 m12 l6 input-field">
-                                    <i class="material-icons prefix">bank</i>
+                                    <i class="material-icons prefix">sms</i>
                                     <label for="mobile-no-for-sms">Mobile Number for SMS</label>
                                     <input type="number" name="mobile-no-for-sms" id="mobile-no-for-sms">
                                 </div>
@@ -807,10 +892,77 @@
         </section>
 
 
-        
-
     </main>
-    <footer></footer>
+
+
+
+    <footer class="black">
+        <title>Forms</title>
+        <!-- Black Space Section -->
+        <section class="section">
+            <div class="container">
+                <br>
+                <div class="row">
+                    <div class="col s12 m12 l3 center-align">
+                        <a href="index.html" class="brand-logo">
+                            <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 250px">
+                            <p class="white-text">
+                                For more information contact
+                                <a class="red-text" href="#">+234-8081382852</a>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col s12 m12 l4 push-l5">
+                        <h4 class="red-text text-darken-4">Quick Links</h4>
+                            <ul>
+                                <li>
+                                    <a href="#top" class="white-text text-darken-4">Back to Top</a>
+                                </li>
+                                <li>
+                                    <a href="#pi" class="white-text text-darken-4">Personal Information</a>
+                                </li>
+                                <li>
+                                    <a href="#k" class="white-text text-darken-4">Next of Kin Details</a>
+                                </li>
+                                <li>
+                                    <a href="#ed" class="white-text text-darken-4">Employment Details</a>
+                                </li>
+                                <li>
+                                    <a href="#asr" class="white-text text-darken-4">Account Services Details</a>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h6 class="center align copyright-info" id="foot">&copy; 2024 Recipes.com | ToluMichael</h6>
+        </section>
+    </footer>
+
+    <div class="container">
+        <div class="fixed-action-btn">
+            <a class="btn btn-floating red darken-4 pulse btn-large">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li>
+                    <a href="#cakes" class="btn-floating orange lighten-1">
+                        <span>CA</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#soups" class="btn-floating orange lighten-1">
+                        <span>SO</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#chickens" class="btn-floating orange lighten-1">
+                        <span>CH</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>
     <script>
@@ -827,6 +979,9 @@
             $('.datepicker').datepicker({
                 yearRange: 50,
                 format:'dd mmm, yyyy'
+            });
+            $('.fixed-action-btn').floatingActionButton({
+                direction: 'top'
             });
         });
     </script>
