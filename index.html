@@ -22,12 +22,6 @@
         .navlink-DT{
             padding: 0px 25px;
         }
-        #foot{
-            background-color: #B71C1C;
-            color: white;
-            margin-bottom: -50px;
-            padding: 20px;
-        }
         #compact{
             padding: 0px 10px;
         }
@@ -49,8 +43,8 @@
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 12px;
             position: absolute;
-            top: 120%;
-            left: -8%;
+            top: 100%;
+            left: -20%;
             color: black !important;
             transform: translate(0%, 0%)
         }
@@ -58,16 +52,16 @@
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 12px;
             position: absolute;
-            top: 120%;
-            left: 85%;
+            top: 100%;
+            left: 84%;
             color: black !important;
         }
         #form-logo-text-3{
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 12px;
             position: absolute;
-            top: 120%;
-            left: 80%;
+            top: 100%;
+            left: 79%;
             color: black !important;
         }
         h1,h2,h3,h4,h5,h6{
@@ -76,7 +70,7 @@
             font-family: "Josefin Sans", serif;
         }
         h2{
-            font-size: 48px;
+            font-size: 45px;
         }
         #form-title{
             font-size:35px;
@@ -154,15 +148,33 @@
             border: 6px solid;
             border-radius: 8px;
         }
+        #nav-logo{
+            margin-top: 7px;
+            background-color: white;
+            border: 6px solid;
+            border-radius: 8px;
+        }
+        #foot{
+            background-color: #B71C1C;
+            color: white;
+            margin-top: 40px;
+            margin-bottom: -50px;
+            padding: 22px;
+        }
         .gradient{
             background-color: #B71C1C;
         }
         .copyright{
-            color: rgba(255, 255, 255, 0.722);
+            color: rgba(166, 162, 162, 0.722);
         }
         #copyright{
             font-size: 20px;
             font-weight: 500;
+        }
+        #main-styled{
+            margin: 0% 3%;
+            border: 3px solid grey;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -204,7 +216,8 @@
                         <i class="material-icons">menu</i>
                     </a>
                     <a href="index.html" class="brand-logo">
-                        <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 42px" id="logo-shift">
+                        <img src="img/logo.svg" alt="" class="responsive-img hide-on-small-only" style="max-width: 42px" id="logo-shift">
+                        <img src="img/logo.svg" alt="" class="responsive-img hide-on-med-and-up" style="max-width: 42px" id="nav-logo">
                     </a>
                     <ul class="sidenav hide-on-large-only" id="sidenav">
                         <li>
@@ -227,7 +240,7 @@
 
 
 <br><br>
-    <main class="section">
+    <main class="section" id="main-styled">
         <div>
             <!-- Zenith Bank Picture with text in it -->
         </div>
@@ -253,7 +266,8 @@
                             <p class=" center-align show-on-small-only hide-on-med-and-up" id="form-logo-text-3">Zenith Bank PLC <br> RC:150224</p>
                         </div>
                         <br>
-                        <p class="red-text bold-text" style="font-size: 18px; font-weight: bold; margin-top: 28px;">Category of Account: (Tick appropriately)</p>
+                        <p class="red-text bold-text hide-on-small-only" style="font-size: 18px; font-weight: bold; margin-top: 28px;">Category of Account: (Tick appropriately)</p>
+                        <p class="red-text bold-text hide-on-med-and-up" style="font-size: 15px; font-weight: bold; margin-top: 28px;">Category of Account: (Tick appropriately)</p>
                         <div class="col s12 m12 l2 input-field">
                             <input type="checkbox" class="timepicker" placeholder="Individual">
                             <p>
@@ -323,9 +337,9 @@
 <br><br>
 <!-- Section-2 -->
         <section class="section">
-            <div class="container">
-                <h5>1. PERSONAL INFORMATION</h5>
-                <form action="">
+            <div class="container" style="border-radius: 10px; padding: 20px; background-color: #B71C1C;">
+                <h5 class="white-text">1. PERSONAL INFORMATION</h5>
+                <form action="" style="background-color: white !important; margin-left: -17px; margin-right: -17px; margin-bottom: -35px; border-radius: 10px;">
                     <div class="form">
                         <div class="row">
                         <!-- Line-1 -->
@@ -545,9 +559,9 @@
 
 <br><br>
         <section class="section">
-            <div class="container">
-                <h5>2. DETAILS OF NEXT OF KIN</h5>
-                <form action="">
+            <div class="container" style="border-radius: 10px; padding: 20px; background-color: #B71C1C;">
+                <h5 class="white-text">2. DETAILS OF NEXT OF KIN</h5>
+                <form action="" style="background-color: white !important; margin-left: -17px; margin-right: -17px; margin-bottom: -35px; border-radius: 10px;">
                     <div class="form">
                         <div class="row">
                         <!-- Line-1 -->
@@ -652,9 +666,9 @@
 
 <br><br>
         <section class="section">
-            <div class="container">
-                <h5>3. EMPLOYMENT DETAILS</h5>
-                <form action="">
+            <div class="container" style="border-radius: 10px; padding: 20px; background-color: #B71C1C;">
+                <h5 class="white-text">3. EMPLOYMENT DETAILS</h5>
+                <form action="" style="background-color: white !important; margin-left: -17px; margin-right: -17px; margin-bottom: -35px; border-radius: 10px;">
                     <div class="form">
                         <div class="row">
                         <!-- Line-1 -->
@@ -713,7 +727,7 @@
                                 <label for="title-ed" placeholder="Title">Title</label>
                             </div>
                             <div class="col s12 m12 l9 input-field">
-                                <i class="material-icons prefix">bank</i>
+                                <i class="material-icons prefix">person_outline</i>
                                 <label for="employer's-name">Employer's Full Name</label>
                                 <input type="text" name="employer's-name" id="employer's-name">
                             </div>
@@ -772,9 +786,9 @@
 
 <br><br>
         <section class="section">
-            <div class="container">
-                <h5>4. ACCOUNT SERVICE(S) REQUIRED (PLEASE TICK APPLICABLE OPTION BELOW)</h5>
-                <form action="">
+            <div class="container" style="border-radius: 10px; padding: 20px; background-color: #B71C1C;">
+                <h5 class="white-text">4. ACCOUNT SERVICE(S) REQUIRED (PLEASE TICK APPLICABLE OPTION BELOW)</h5>
+                <form action="" style="background-color: white !important; margin-left: -17px; margin-right: -17px; margin-bottom: -35px; border-radius: 10px;">
                     <div class="form">
                         <div id="compact">
                             <div class="row">
@@ -903,23 +917,26 @@
                             </div>
                         </div>
                     </div>
-                    <br><br>
-                    <div class="section">
-                        <div class="row">
-                            <div class="col s12 m12 l12 right-align">
-                                <input class="btn btn-large red darken-4" type="submit" name="button" id="button" value="submit">
-                            </div>
+                </form>
+            </div>
+            <br><br><br>
+            <div class="container">
+                <div class="section">
+                    <div class="row">
+                        <div class="col s12 m12 l12 right-align">
+                            <input class="btn btn-large red darken-4" type="submit" name="button" id="button" value="submit">
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </section>
 
 
+<br>
     </main>
 
 
-
+<br><br>
     <footer class="black">
         <title>Forms</title>
         <!-- Black Space Section -->
@@ -927,18 +944,21 @@
             <div class="container">
                 <br>
                 <div class="row">
-                    <div class="col s12 m12 l3 center-align">
+                    <div class="col s12 m5 l4 center">
                         <a href="index.html" class="brand-logo">
                             <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 250px">
                             <p class="white-text">
-                                For more information contact
+                                For more information contact <br>
                                 <a class="red-text" href="#">+234-8081382852</a>
                             </p>
                         </a>
                     </div>
-                    <div class="col s12 m12 l4 push-l5">
+                    <div class="col m2 l4">
+                        <p>h</p>
+                    </div>
+                    <div class="col s12 m5 l4">
                         <h4 class="red-text text-darken-4">Quick Links</h4>
-                            <ul>
+                            <ul style="line-height: 25px;">
                                 <li>
                                     <a href="#top" class="white-text text-darken-4">Back to Top</a>
                                 </li>
@@ -959,14 +979,14 @@
                     </div>
                 </div>
             </div>
-            <h6 class="center align copyright-info" id="foot">&copy; 2024 Recipes.com | ToluMichael</h6>
+            <h6 class="center align copyright-info" id="foot" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; letter-spacing: 1px; font-size: 15px; color: rgba(255, 255, 255, 0.558);">&copy; 2024 Zenith Bank PLC | ToluMichael</h6>
         </section>
     </footer>
 
     <div class="container">
         <div class="fixed-action-btn">
             <a class="btn btn-floating red darken-4 pulse btn-large">
-                <i class="material-icons">menu</i>
+                <i class="material-icons white-text">menu</i>
             </a>
             <ul>
                 <li>
