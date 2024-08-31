@@ -51,8 +51,8 @@
             position: absolute;
             top: 120%;
             left: -8%;
-            transform: translate(0%, 0%)
             color: black !important;
+            transform: translate(0%, 0%)
         }
         #form-logo-text-2{
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -79,7 +79,13 @@
             font-size: 48px;
         }
         #form-title{
-            font-size: 28px;
+            font-size:35px;
+        }
+        #fill-guide{
+            margin-top: -20px;
+        }
+        .italics{
+            font-style: italic;
         }
         .clear-text{
             color: black !important;
@@ -131,6 +137,17 @@
         [type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:before, [type="radio"].with-gap:checked + span:after {
             border: 2px solid #B71C1C;
         }
+        .btn-floating i {
+            width: inherit;
+            display: inline-block;
+            text-align: center;
+            color: #B71C1C;
+            font-size: 1.6rem;
+            line-height: 40px;
+        }
+        #fill-guide{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
         #logo-shift{
             margin-top: 10px;
             background-color: white;
@@ -180,7 +197,7 @@
                 </div>
             </nav>
         </div>
-        <div class="navbar-fixed hide-on-large-only scrollspy">
+        <div class="navbar-fixed hide-on-large-only">
             <nav class="red darken-4">
                 <div class="container">
                     <a href="#sidenav" class="sidenav-trigger">
@@ -218,11 +235,13 @@
         <div class="container section">
             <form action="">
                 <div class="form">
-                    <h2 class="red-text text-darken-3 center-align hide-on-med-and-down">INIDIVUAL ACCOUNT OPENING FORM</h2>
-                    <h3 id="form-title" class="red-text text-darken-3 center-align hide-on-large-only">INIDIVUAL ACCOUNT OPENING FORM</h3>
+                    <h2 class="red-text text-darken-3 center-align hide-on-small-only">INIDIVUAL ACCOUNT OPENING FORM</h2>
+                    <h3 id="form-title" class="red-text text-darken-3 center-align hide-on-med-and-up">INIDIVUAL ACCOUNT <br> OPENING FORM</h3>
+                    <div class="container">
+                        <p class="center-align italics" id="fill-guide">This form should be fill in CAPITAL LETTERS. Enable to Check the boxes that apply to you.</p>
+                    </div>
                     <div class="row">
                         <div class="col s12 m12 l11">
-                            <p class="left-align">This form should be fill in CAPITAL LETTERS. Enable to Check the boxes that apply to you.</p>
                         </div>
 <!-- <br> -->
                         <div class="col s12 m12 l1 push-l2 right" id="form-logo">
@@ -233,7 +252,8 @@
                             <p class=" center-align show-on-medium hide-on-small-and-down hide-on-large-only" id="form-logo-text-2">Zenith Bank PLC <br> RC:150224</p>
                             <p class=" center-align show-on-small-only hide-on-med-and-up" id="form-logo-text-3">Zenith Bank PLC <br> RC:150224</p>
                         </div>
-                        <p class="red-text">Category of Account: (Tick appropriately)</p>
+                        <br>
+                        <p class="red-text bold-text" style="font-size: 18px; font-weight: bold; margin-top: 28px;">Category of Account: (Tick appropriately)</p>
                         <div class="col s12 m12 l2 input-field">
                             <input type="checkbox" class="timepicker" placeholder="Individual">
                             <p>
@@ -278,23 +298,24 @@
                             <label for="domiciliary-account" placeholder="domiciliary-account">Domiciliary Account</label>
                         </div>
                     </div>
-                <div class="row">
-                    <div class="col s12 m12 l12 input-field">
-                        <i class="material-icons prefix">account_balance</i>
-                        <label for="branch">Branch</label>
-                        <input type="text" name="branch" id="branch">
+                    <div class="row">
+                        <div class="col s12 m12 l12 input-field">
+                            <i class="material-icons prefix">account_balance</i>
+                            <label for="branch">Branch</label>
+                            <input type="text" name="branch" id="branch">
+                        </div>
+                        <div class="col s12 m12 l6 input-field">
+                            <i class="material-icons prefix">numbers</i>
+                            <label for="bvn">Bank Verification Number (BVN)</label>
+                            <input type="number" name="bvn" id="bvn">
+                        </div>
+                        <div class="col s12 m12 l6 input-field">
+                            <i class="material-icons prefix">numbers</i>
+                            <label for="acc-no">Account Number (For Official Use Only)</label>
+                            <input type="number" name="acc-no" id="acc-no">
+                            <div id="pi" class="scrollspy"></div> <!-- for button locating -->
+                        </div>
                     </div>
-                    <div class="col s12 m12 l6 input-field">
-                        <i class="material-icons prefix">numbers</i>
-                        <label for="bvn">Bank Verification Number (BVN)</label>
-                        <input type="number" name="bvn" id="bvn">
-                    </div>
-                    <div class="col s12 m12 l6 input-field">
-                        <i class="material-icons prefix">numbers</i>
-                        <label for="acc-no">Account Number (For Official Use Only)</label>
-                        <input type="number" name="acc-no" id="acc-no">
-                    </div>
-                </div>
                 </div>
             </form>
         </div>
@@ -473,19 +494,19 @@
                                 <p>
                                     <label for="national-id-card">
                                         <input class="clear-text" type="radio" name="name" id="national-id-card">
-                                        <span>National ID Card</span>
+                                        <span style="color: black !important;">National ID Card</span>
                                     </label>
                                     <label for="driver's-license">
                                         <input type="radio" name="name" id="driver's-license"> 
-                                        <span>Driver's License</span>
+                                        <span style="color: black !important;">Driver's License</span>
                                     </label>
                                     <label for="international-passport">
                                         <input class="clear-text" type="radio" name="name" id="international-passport"> 
-                                        <span>International Passport</span>
+                                        <span style="color: black !important;">International Passport</span>
                                     </label>
                                     <label for="inec-voter's-card">
                                         <input class="clear-text" type="radio" name="name" id="inec-voter's-card"> 
-                                        <span>INEC Voter's Card</span>
+                                        <span style="color: black !important;">INEC Voter's Card</span>
                                     </label>
                                 </p>
                             </div>
@@ -513,6 +534,7 @@
                                 <i class="material-icons prefix">question_mark</i>
                                 <label for="purpose-of-account">Purpose of Account</label>
                                 <input type="text" name="purpose-of-account" id="purpose-of-account">
+                                <div id="k" class="scrollspy"></div> <!-- for button locating -->
                             </div>
                         </div>
                     </div>
@@ -619,6 +641,7 @@
                                 <i class="material-icons prefix">place</i>
                                 <label for="l-g-a-k">L.G.A</label>
                                 <input type="text" name="l-g-a-k" id="l-g-a-k">
+                                <div id="ed" class="scrollspy"></div> <!-- for button locating -->
                             </div>
                         </div>
                     </div>
@@ -737,6 +760,7 @@
                                 <i class="material-icons prefix">phone</i>
                                 <label for="office-no-2">Office Number 2</label>
                                 <input type="number" name="office-no-2" id="office-no-2">
+                                <div id="asr"></div> <!-- for button locating -->
                             </div>
                         </div>
                     </div>
@@ -755,20 +779,20 @@
                         <div id="compact">
                             <div class="row">
                             <!-- Line-1 -->
-                                <p>Debit Card Preference(s) <span class="red-text">(NOTE: Fees apply)</span></p>
+                                <p>Debit Card Preference(s) <span class="red-text" style="font-size: 11px !important;">(NOTE: Fees apply)</span></p>
                                 <div class="col s12 m12 l4 input-field">
                                     <p>
                                         <label for="master-card">
                                             <input class="clear-text" type="radio" name="name" id="master-card">
-                                            <span>Master Card</span>
+                                            <span style="color: black !important;">Master Card</span>
                                         </label>
                                         <label for="verve">
                                             <input class="clear-text" type="radio" name="name" id="verve"> 
-                                            <span>Verve</span>
+                                            <span style="color: black !important;">Verve</span>
                                         </label>
                                         <label for="visa">
                                             <input class="clear-text" type="radio" name="name" id="visa"> 
-                                            <span>Visa</span>
+                                            <span style="color: black !important;">Visa</span>
                                         </label>
                                     </p>
                                 </div>
@@ -786,7 +810,7 @@
                                     <p>
                                         <label for="internet-banking">
                                             <input type="checkbox" name="internet-banking" id="internet-banking">
-                                            <span class="black-text">Internet Banking <span class="red-text">(Enquiries only)</span></span>
+                                            <span class="black-text">Internet Banking <span class="red-text" style="font-size: 11px !important;">(Enquiries only)</span></span>
                                         </label>
                                     </p>
                                 </div>
@@ -797,9 +821,9 @@
                                         <option value="">Yes (with Hardware Token)</option>
                                         <option value="">Yes (with Software Token)</option>
                                     </select>
-                                    <label for="account-type" placeholder="Account Type">Internet Banking<span class="red-text">(Fund Transfer)</span>
+                                    <label for="account-type" placeholder="Account Type">Internet Banking <span class="red-text" style="font-size: smaller !important;">(Fund Transfer)</span>
                                     </label>
-                                    <p class="red-text">NOTE: Fund Transfer and Hardware Token required at a Fee</p>
+                                    <p class="red-text center-align" style="font-size: 13px !important;">NOTE: Fund Transfer and Hardware Token required at a Fee</p>
                                 </div>
                             </div>
                             <!-- Line-3 -->
@@ -842,7 +866,7 @@
                                     <p>
                                         <label for="email-alert">
                                             <input type="checkbox" name="email-alert" id="email-alert">
-                                            <span class="black-text">E-mail Alert <span class="red-text">(Free)</span></span>
+                                            <span class="black-text">E-mail Alert <span class="red-text" style="font-size: 11px !important;">(Free)</span></span>
                                         </label>
                                     </p>
                                 </div>
@@ -851,23 +875,23 @@
                                     <p>
                                         <label for="sms-alert">
                                             <input type="checkbox" name="sms-alert" id="sms-alert">
-                                            <span class="black-text">SMS Alert <span class="red-text">(Fees Apply)</span></span>
+                                            <span class="black-text">SMS Alert <span class="red-text" style="font-size: 11px !important;">(Fees Apply)</span></span>
                                         </label>
                                     </p>
                                 </div>
-                                <div class="col s12 m12 l6 input-field">
+                                <div class="col s12 m12 l3 input-field">
                                     <i class="material-icons prefix">sms</i>
                                     <label for="mobile-no-for-sms">Mobile Number for SMS</label>
                                     <input type="number" name="mobile-no-for-sms" id="mobile-no-for-sms">
                                 </div>
-                                <div class="col s12 m12 l12">
-                                    <p class="red-text">NOTE: Where a customer opts not to receive SMS alert, the customer should issue an indemnity (for losses that may arise as a result) to the bank</p>
+                                <div class="col s12 m12 l3">
+                                    <p class="red-text center-align" style="font-size: 13px; font-weight: bold !important; margin-top: -10px;">NOTE: Where a customer opts not to receive SMS alert, the customer should issue an indemnity (for losses that may arise as a result) to the bank</p>
                                 </div>
                             </div>
-                            <br>
+                            <!-- <br> -->
                             <!-- Line-5 -->
                             <div class="row">
-                                <div class="col s12 m12 l3 input-field">
+                                <div class="col s12 m12 l6 input-field">
                                     <select name="statement-delivery-preferences" id="statement-delivery-preferences">
                                         <option value="">Select your preference</option>
                                         <option value="">Online</option>
@@ -946,18 +970,28 @@
             </a>
             <ul>
                 <li>
-                    <a href="#cakes" class="btn-floating orange lighten-1">
-                        <span>CA</span>
+                    <a href="#top" class="btn-floating white">
+                        <i class="material-icons">navigation</i>
                     </a>
                 </li>
                 <li>
-                    <a href="#soups" class="btn-floating orange lighten-1">
-                        <span>SO</span>
+                    <a href="#pi" class="btn-floating white">
+                        <i class="material-icons">account_circle</i>
                     </a>
                 </li>
                 <li>
-                    <a href="#chickens" class="btn-floating orange lighten-1">
-                        <span>CH</span>
+                    <a href="#k" class="btn-floating white">
+                        <i class="material-icons">family_restroom</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#ed" class="btn-floating white">
+                        <i class="material-icons">engineering</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#asr" class="btn-floating white">
+                        <i class="material-icons">payment</i>
                     </a>
                 </li>
             </ul>
@@ -983,6 +1017,7 @@
             $('.fixed-action-btn').floatingActionButton({
                 direction: 'top'
             });
+            $('.scrollspy').scrollSpy();
         });
     </script>
 </body>
