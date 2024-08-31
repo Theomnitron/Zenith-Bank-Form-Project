@@ -11,15 +11,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Zenith Bank Form</title>
     <style>
+        *{
+            font-weight: 100px;
+        }
         .navlink-DT{
             padding: 0px 25px;
         }
         #compact{
             padding: 0px 10px;
         }
+        .sidenav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            height: 120vh;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 997;
+            display: none;
+        }
+        #form-logo{
+            position: relative;
+        }
+        #form-logo-text{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 12px;
+            font-weight: 50px !important;
+            position: absolute;
+            top: 120%;
+            left: -8%;
+            transform: translate(0%, 0%)
+        }
+        #form-logo-text-2{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 12px;
+            font-weight: 50px !important;
+            position: absolute;
+            top: 120%;
+            left: 85%;
+        }
+        #form-logo-text-3{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 12px;
+            font-weight: 50px !important;
+            position: absolute;
+            top: 120%;
+            left: 80%;
+        }
+        span, label, p{
+            font-style: block;
+        }
     </style>
 </head>
-<body class="hide-on-med-and-down-only">
+<body>
     <header>
         <div class="navbar-fixed hide-on-med-and-down scrollspy" id="top">
             <nav class="red darken-4">
@@ -46,16 +91,36 @@
                                 <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 35px" id="logo-shift">
                             </a>
                         </div>
-                        <!-- <div>
-                            <div class="btn btn-fixed btn-border orange darken-4 navlink-DT z-depth-0">
-                                <a href="" class="white-text">
-                                    login
-                                </a>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </nav>
+        </div>
+        <div class="navbar-fixed hide-on-large-only scrollspy">
+            <nav class="red darken-4">
+                <div class="container">
+                    <a href="#sidenav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <a href="index.html" class="brand-logo">
+                        <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 35px" id="logo-shift">
+                    </a>
+                    <ul class="sidenav hide-on-large-only" id="sidenav">
+                        <li>
+                            <a href="#" class="bold-text navlink-DT">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="bold-text navlink-DT">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="bold-text navlink-DT">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="bold-text navlink-DT">Forms</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
 
@@ -68,19 +133,23 @@
         <div class="container section">
             <form action="">
                 <div class="form">
-                    <h2 class="red-text text-darken-3 center-align">INIDIVUAL ACCOUNT OPENING FORM</h2>
+                    <h2 class="red-text text-darken-3 center-align hide-on-med-and-down">INIDIVUAL ACCOUNT OPENING FORM</h2>
+                    <h3 class="red-text text-darken-3 center-align hide-on-large-only">INIDIVUAL ACCOUNT OPENING FORM</h3>
                     <div class="row">
-                        <div class="col l11">
-                            <p class="left-align">This form should be fill in CAPITAL LETTERS. Enable to Check the boxes that aplly to you.</p>
+                        <div class="col s12 m12 l11">
+                            <p class="left-align">This form should be fill in CAPITAL LETTERS. Enable to Check the boxes that apply to you.</p>
                         </div>
 <!-- <br> -->
-                        <div class="col l1 push-l2">
+                        <div class="col s12 m12 l1 push-l2 right" id="form-logo">
                             <a href="index.html" class="brand-logo">
-                                <img src="img/logo.svg" alt="" class="responsive-img" style="max-width: 100px" id="logo-form-shift">
+                                <img src="img/logo.svg" alt="" class="responsive-img right" style="max-width: 100px" id="logo-form-shift">
                             </a>
+                            <span class="center-align show hide-on-med-and-down" id="form-logo-text">Zenith Bank PLC <br> RC:150224</span>
+                            <span class=" center-align show-on-medium hide-on-small-and-down hide-on-large-only" id="form-logo-text-2">Zenith Bank PLC <br> RC:150224</span>
+                            <span class=" center-align show-on-small-only hide-on-med-and-up" id="form-logo-text-3">Zenith Bank PLC <br> RC:150224</span>
                         </div>
                         <p class="red-text">Category of Account: (Tick appropriately)</p>
-                        <div class="col l2 input-field">
+                        <div class="col s12 m12 l2 input-field">
                             <input type="checkbox" class="timepicker" placeholder="Individual">
                             <p>
                                 <label for="individual">
@@ -89,7 +158,7 @@
                                 </label>
                             </p>
                         </div>
-                        <div class="col l2 input-field">
+                        <div class="col s12 m12 l2 input-field">
                             <input type="checkbox" class="timepicker" placeholder="Joint">
                             <p>
                                 <label for="joint">
@@ -98,14 +167,14 @@
                                 </label>
                             </p>
                         </div>
-                        <div class="col l8 input-field">
+                        <div class="col s12 m12 l8 input-field">
                             <i class="material-icons prefix">bank</i>
                             <label for="name-of-account">Name of Account</label>
                             <input type="text" name="name-of-account" id="name-of-account">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col l6 input-field">
+                        <div class="col s12 m12 l6 input-field">
                             <select name="account-type" id="account-type">
                                 <option value="">Select the type of your account</option>
                                 <option value="">Savings</option>
@@ -114,7 +183,7 @@
                             </select>
                             <label for="account-type" placeholder="Account Type">Account Type</label>
                         </div>
-                        <div class="col l6 input-field">
+                        <div class="col s12 m12 l6 input-field">
                             <select name="domiciliary-account" id="domiciliary-account">
                                 <option value="">Select your account's currency</option>
                                 <option value="">US Dollars</option>
@@ -125,17 +194,17 @@
                         </div>
                     </div>
                 <div class="row">
-                    <div class="col l12 input-field">
+                    <div class="col s12 m12 l12 input-field">
                         <i class="material-icons prefix">bank</i>
                         <label for="branch">Branch</label>
                         <input type="text" name="branch" id="branch">
                     </div>
-                    <div class="col l6 input-field">
+                    <div class="col s12 m12 l6 input-field">
                         <i class="material-icons prefix">bank</i>
                         <label for="bvn">Bank Verification Number (BVN)</label>
                         <input type="number" name="bvn" id="bvn">
                     </div>
-                    <div class="col l6 input-field">
+                    <div class="col s12 m12 l6 input-field">
                         <i class="material-icons prefix">bank</i>
                         <label for="acc-no">Account Number (For Official Use Only)</label>
                         <input type="number" name="acc-no" id="acc-no">
@@ -154,7 +223,7 @@
                     <div class="form">
                         <div class="row">
                         <!-- Line-1 -->
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <select name="title" id="title">
                                     <option value="">Select your title</option>
                                     <option value="">Mr</option>
@@ -174,33 +243,33 @@
                                 </select>
                                 <label for="title" placeholder="title">Title</label>
                             </div>
-                            <div class="col l9 input-field">
+                            <div class="col s12 m12 l9 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="surname">Surname</label>
                                 <input type="text" name="surname" id="surname">
                             </div>
                         <!-- Line-2 -->
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="firstname">Firstname</label>
                                 <input type="text" name="firstname" id="firstname">
                             </div>
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="othernames">Other Names</label>
                                 <input type="text" name="othernames" id="othernames">
                             </div>
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="mother's-maiden">Mother's Maiden</label>
                                 <input type="text" name="mother's-maiden" id="mother's-maiden">
                             </div>
                         <!-- Line-3 -->
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <i class="material-icons prefix">date_range</i>
                                 <input type="text" class="datepicker" placeholder="Date of Birth">
                             </div>
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <select name="gender" id="gender">
                                     <option value="">select your gender</option>
                                     <option value="">Male</option>
@@ -208,24 +277,24 @@
                                 </select>
                                 <label for="gender" placeholder="Gender">Gender</label>
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="place-of-birth">Place of Birth</label>
                                 <input type="text" name="place-of-birth" id="place-of-birth">
                             </div>
                         <!-- Line-4 -->
-                            <div class="col l12 input-field">
+                            <div class="col s12 m12 l12 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="nationality">Nationality</label>
                                 <input type="text" name="nationality" id="nationality">
                             </div>
                         <!-- Line-5-->
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="state-of-origin">State of Origin</label>
                                 <input type="text" name="state-of-origin" id="state-of-origin">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <select name="marital-status" id="marital-status">
                                     <option value="">select your marital status</option>
                                     <option value="">Single</option>
@@ -236,77 +305,77 @@
                                 <label for="marital-status" placeholder="Marital Status">Marital status</label>
                             </div>
                         <!-- Line-6 -->
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="local-government-area">Local Government Area</label>
                                 <input type="text" name="local-government-area" id="local-government-area">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="home-town">Home Town</label>
                                 <input type="text" name="home-town" id="home-town">
                             </div>
                         <!-- Line-7 -->
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="tax-id-no">Tax ID No.</label>
                                 <input type="text" name="tax-id-no" id="tax-id-no">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="religion">Religion (optional)</label>
                                 <input type="text" name="religion" id="religion">
                             </div>
                         <!-- Line-8 -->
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="phone-number-1">Phone Number 1</label>
                                 <input type="number" name="phone-number-1" id="phone-number-1">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="phone-number-2">Phone Number 2</label>
                                 <input type="number" name="phone-number-2" id="phone-number-2">
                             </div>
                         <!-- Line-9 -->
-                            <div class="col l12 input-field">
+                            <div class="col s12 m12 l12 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="email">E-mail Address</label>
                                 <input type="text" name="email" id="email">
                             </div>
                         <!-- Line-10 -->
-                            <div class="col l12 input-field">
+                            <div class="col s12 m12 l12 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="residential-address">Residential Address</label>
                                 <input type="text" name="residential-address" id="residential-address">
                             </div>
                         <!-- Line-11 -->
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="state">State</label>
                                 <input type="text" name="state" id="state">
                             </div>
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="l-b-a">L.G.A</label>
                                 <input type="text" name="l-b-a" id="l-b-a">
                             </div>
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="city/town">City/Town</label>
                                 <input type="text" name="city/town" id="city/town">
                             </div>
                         <!-- Line-12 -->
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="residence-permit-no">Residence Permit Number</label>
                                 <input type="text" name="residence-permit-no" id="residence-permit-no">
                             </div>
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">date_range</i>
                                 <input type="text" class="datepicker" placeholder="Permit Issue Date">
                             </div>
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">date_range</i>
                                 <input type="text" class="datepicker" placeholder="Permit Expiring Date">
                             </div>
@@ -315,7 +384,7 @@
                         <!-- Line-13 -->
                         <div class="row">
                             <h6 class="center-align">Means of Identification</h6>
-                            <div class="col l9 input-field">
+                            <div class="col s12 m12 l9 input-field">
                                 <p>
                                     <label for="national-id-card">
                                         <input type="radio" name="name" id="national-id-card">
@@ -335,27 +404,27 @@
                                     </label>
                                 </p>
                             </div>
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="others">*Others (Please specify)</label>
                                 <input type="text" name="others" id="others">
                             </div>
                         <!-- Line-14 -->
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="id-no">ID Number</label>
                                 <input type="number" name="id-no" id="id-no">
                             </div>
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <i class="material-icons prefix">date_range</i>
                                 <input type="text" class="datepicker" placeholder="ID Issue date">
                             </div>
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <i class="material-icons prefix">date_range</i>
                                 <input type="text" class="datepicker" placeholder="ID Expiry Date">
                             </div>
                         <!-- Line-15 -->
-                            <div class="col l12 input-field">
+                            <div class="col s12 m12 l12 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="purpose-of-account">Purpose of Account</label>
                                 <input type="text" name="purpose-of-account" id="purpose-of-account">
@@ -375,7 +444,7 @@
                     <div class="form">
                         <div class="row">
                         <!-- Line-1 -->
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <select name="title-2" id="title-2">
                                     <option value="">Select your title</option>
                                     <option value="">Mr</option>
@@ -395,27 +464,27 @@
                                 </select>
                                 <label for="title-2" placeholder="Title">Title</label>
                             </div>
-                            <div class="col l9 input-field">
+                            <div class="col s12 m12 l9 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="surname-k">Surname</label>
                                 <input type="text" name="surname-k" id="surname-k">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="firstname-k">Firstname</label>
                                 <input type="text" name="firstname-k" id="firstname-k">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="othernames-k">Other Names</label>
                                 <input type="text" name="othernames-k" id="othernames-k">
                             </div>
                         <!-- line-2 -->
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <i class="material-icons prefix">date_range</i>
                                 <input type="text" class="datepicker" placeholder="Date of Birth">
                             </div>
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <select name="gender-k" id="gender-k">
                                     <option value="">select your gender</option>
                                     <option value="">Male</option>
@@ -423,45 +492,45 @@
                                 </select>
                                 <label for="gender-k" placeholder="Gender">Gender</label>
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="relationship">Relationship</label>
                                 <input type="text" name="relationship" id="relationship">
                             </div>
                         <!-- Line-3 -->
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="phone-number-1-k">Phone Number 1</label>
                                 <input type="number" name="phone-number-1-k" id="phone-number-1-k">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="phone-number-2-k">Phone Number 2</label>
                                 <input type="number" name="phone-number-2-k" id="phone-number-2-k">
                             </div>
                         <!-- Line-4 -->
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="house-no-k">House Number</label>
                                 <input type="number" name="house-no-k" id="house-no-k">
                             </div>
-                            <div class="col l5 input-field">
+                            <div class="col s12 m12 l5 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="street-name-k">Street Name</label>
                                 <input type="text" name="street-name-k" id="street-name-k">
                             </div>
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="city/town-k">City/Town</label>
                                 <input type="text" name="city/town-k" id="city/town-k">
                             </div>
                         <!-- Line-5 -->
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="state-k">State</label>
                                 <input type="text" name="state-k" id="state-k">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="l-g-a-k">L.G.A</label>
                                 <input type="text" name="l-g-a-k" id="l-g-a-k">
@@ -481,7 +550,7 @@
                     <div class="form">
                         <div class="row">
                         <!-- Line-1 -->
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <select name="employment-status" id="employment-status">
                                     <option value="">Select your marital status</option>
                                     <option value="">Employed</option>
@@ -491,16 +560,16 @@
                                 </select>
                                 <label for="employment-status" placeholder="employment-status">Employment Status</label>
                             </div>
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="others-k">*Others (please specify)</label>
                                 <input type="text" name="others-k" id="others-k">
                             </div>
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <i class="material-icons prefix">date_range</i>
                                 <input type="text" class="datepicker" placeholder="Date of Employment (Optional)">
                             </div>
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <select name="annual-salary" id="annual-salary">
                                     <option value="">Select your Annual Salary</option>
                                     <option value="">Below #50,000</option>
@@ -515,7 +584,7 @@
                                 <label for="annual-salary" placeholder="Annual Salary">Annual Salary/Expected Annual Income</label>
                             </div>
                         <!-- Line-2 -->
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <select name="title-ed" id="title-ed">
                                     <option value="">Select your title</option>
                                     <option value="">Mr</option>
@@ -535,51 +604,51 @@
                                 </select>
                                 <label for="title-ed" placeholder="Title">Title</label>
                             </div>
-                            <div class="col l9 input-field">
+                            <div class="col s12 m12 l9 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="employer's-name">Employer's Full Name</label>
                                 <input type="text" name="employer's-name" id="employer's-name">
                             </div>
                         <!-- Line-3 -->
-                            <div class="col l3 input-field">
+                            <div class="col s12 m12 l3 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="house-no-ed">House Number</label>
                                 <input type="number" name="house-no-ed" id="house-no-ed">
                             </div>
-                            <div class="col l5 input-field">
+                            <div class="col s12 m12 l5 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="street-name-ed">Street Name</label>
                                 <input type="text" name="street-name-ed" id="street-name-ed">
                             </div>
-                            <div class="col l4 input-field">
+                            <div class="col s12 m12 l4 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="city/town-ed">City/Town</label>
                                 <input type="text" name="city/town-ed" id="city/town-ed">
                             </div>
                         <!-- Line-4 -->
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="state-ed">State</label>
                                 <input type="text" name="state-ed" id="state-ed">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="l-g-a-ed">L.G.A</label>
                                 <input type="text" name="l-g-a-ed" id="l-g-a-ed">
                             </div>
                         <!-- Line-5 -->
-                            <div class="col l12 input-field">
+                            <div class="col s12 m12 l12 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="name-of-business">Name of Business/Occupation</label>
                                 <input type="text" name="name-of-business" id="name-of-business">
                             </div>
                         <!-- Line-6 -->
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="office-no-1">Office Number 1</label>
                                 <input type="number" name="office-no-1" id="office-no-1">
                             </div>
-                            <div class="col l6 input-field">
+                            <div class="col s12 m12 l6 input-field">
                                 <i class="material-icons prefix">bank</i>
                                 <label for="office-no-2">Office Number 2</label>
                                 <input type="number" name="office-no-2" id="office-no-2">
@@ -602,7 +671,7 @@
                             <div class="row">
                             <!-- Line-1 -->
                                 <p>Debit Card Preference(s) <span class="red-text">(NOTE: Fees apply)</span></p>
-                                <div class="col l4 input-field">
+                                <div class="col s12 m12 l4 input-field">
                                     <p>
                                         <label for="master-card">
                                             <input type="radio" name="name" id="master-card">
@@ -618,7 +687,7 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="col l8 input-field">
+                                <div class="col s12 m12 l8 input-field">
                                     <i class="material-icons prefix">bank</i>
                                     <label for="others-asr">*Others (Please specify)</label>
                                     <input type="text" name="others-asr" id="others-asr">
@@ -627,7 +696,7 @@
                             <!-- Line-2 -->
                             <div class="row">
                                 <p>Internet Banking Preference(s)</p>
-                                <div class="col l4 input-field">
+                                <div class="col s12 m12 l4 input-field">
                                     <input type="checkbox" class="timepicker" placeholder="internet-banking">
                                     <p>
                                         <label for="internet-banking">
@@ -636,7 +705,7 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="col l8 input-field">
+                                <div class="col s12 m12 l8 input-field">
                                     <select name="account-type" id="account-type">
                                         <option value="">No</option>
                                         <option value="">Yes</option>
@@ -651,7 +720,7 @@
                             <!-- Line-3 -->
                             <div class="row">
                                 <p>Mobile Banking</p>
-                                <div class="col l3 input-field">
+                                <div class="col s12 m12 l3 input-field">
                                     <input type="checkbox" class="timepicker" placeholder="mobile-banking">
                                     <p>
                                         <label for="mobile-banking">
@@ -660,7 +729,7 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="col l3 input-field">
+                                <div class="col s12 m12 l3 input-field">
                                     <input type="checkbox" class="timepicker" placeholder="checkbook">
                                     <p>
                                         <label for="checkbook">
@@ -669,12 +738,12 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="col l3 input-field">
+                                <div class="col s12 m12 l3 input-field">
                                     <i class="material-icons prefix">bank</i>
                                     <label for="no-of-leaves">No of Leaves</label>
                                     <input type="number" name="no-of-leaves" id="no-of-leaves">
                                 </div>
-                                <div class="col l3 input-field">
+                                <div class="col s12 m12 l3 input-field">
                                     <i class="material-icons prefix">bank</i>
                                     <label for="cost-of-chequebook-is">Cost of Cheque Book is</label>
                                     <input type="number" name="cost-of-chequebook-is" id="cost-of-chequebook-is">
@@ -683,7 +752,7 @@
                             <!-- Line-4 -->
                             <div class="row">
                                 <p>Transaction Alert Preference(s)</p>
-                                <div class="col l3 input-field">
+                                <div class="col s12 m12 l3 input-field">
                                     <input type="checkbox" class="timepicker" placeholder="email-alert">
                                     <p>
                                         <label for="email-alert">
@@ -692,7 +761,7 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="col l3 input-field">
+                                <div class="col s12 m12 l3 input-field">
                                     <input type="checkbox" class="timepicker" placeholder="sms-alert">
                                     <p>
                                         <label for="sms-alert">
@@ -701,19 +770,19 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="col l6 input-field">
+                                <div class="col s12 m12 l6 input-field">
                                     <i class="material-icons prefix">bank</i>
                                     <label for="mobile-no-for-sms">Mobile Number for SMS</label>
                                     <input type="number" name="mobile-no-for-sms" id="mobile-no-for-sms">
                                 </div>
-                                <div class="col l12">
+                                <div class="col s12 m12 l12">
                                     <p class="red-text">NOTE: Where a customer opts not to receive SMS alert, the customer should issue an indemnity (for losses that may arise as a result) to the bank</p>
                                 </div>
                             </div>
                             <br>
                             <!-- Line-5 -->
                             <div class="row">
-                                <div class="col l3 input-field">
+                                <div class="col s12 m12 l3 input-field">
                                     <select name="statement-delivery-preferences" id="statement-delivery-preferences">
                                         <option value="">Select your preference</option>
                                         <option value="">Online</option>
@@ -725,10 +794,20 @@
                             </div>
                         </div>
                     </div>
+                    <br><br>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col s12 m12 l12 right-align">
+                                <input class="btn btn-large red darken-4" type="submit" name="button" id="button" value="submit">
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </section>
 
+
+        
 
     </main>
     <footer></footer>
